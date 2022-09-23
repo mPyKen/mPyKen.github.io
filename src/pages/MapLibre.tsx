@@ -5,7 +5,7 @@ import Map from 'react-map-gl'
 
 import { BaseLayout } from '../components/layouts/BaseLayout'
 
-import 'maplibre-gl/dist/maplibre-gl.css'
+// import 'maplibre-gl/dist/maplibre-gl.css'
 import './MapLibre.css'
 
 export const MapLibre: React.FC = _props => {
