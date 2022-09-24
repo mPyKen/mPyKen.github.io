@@ -1,0 +1,2 @@
+(self.webpackChunkgh_page=self.webpackChunkgh_page||[]).push([[636],{1636:(e,s)=>{s.printMsg=function(){console.log("This is a message from the demo package")}}}]);
+//# sourceMappingURL=636.3622efca.chunk.js.map
