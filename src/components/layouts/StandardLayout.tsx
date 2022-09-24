@@ -1,12 +1,9 @@
+import { Box } from '@mui/material'
 import React from 'react'
 
-import { Header } from '../../stories/Header'
 import { Footer } from '../Footer'
+import { Header } from '../Header'
 import { BaseLayout } from './BaseLayout'
-
-const noop = () => {
-  // do nothing
-}
 
 type Props = {
   children: JSX.Element | JSX.Element[]
@@ -15,9 +12,11 @@ type Props = {
 export const StandardLayout: React.FC<Props> = ({ children }) => {
   return (
     <BaseLayout>
-      <Header onCreateAccount={noop} onLogin={noop} onLogout={noop} />
-      <>{children}</>
-      <Footer label="mPyKen" url="https://github.com/mPyKen" />
+      <Box display="flex" flexDirection="column" height="100vh">
+        <Header flex={0} />
+        <>{children}</>
+        <Footer sx={{ flex: 0 }} label="mPyKen" url="https://github.com/mPyKen" />
+      </Box>
     </BaseLayout>
   )
 }

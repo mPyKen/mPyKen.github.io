@@ -1,24 +1,11 @@
 import React from 'react'
 
-import { Header } from './Header'
+import { StandardLayout } from '../components/layouts/StandardLayout'
 import './page.css'
 
-type User = {
-  name: string
-}
-
 export const Page: React.FC = () => {
-  const [user, setUser] = React.useState<User>()
-
   return (
-    <article>
-      <Header
-        user={user}
-        onLogin={() => setUser({ name: 'Jane Doe' })}
-        onLogout={() => setUser(undefined)}
-        onCreateAccount={() => setUser({ name: 'Jane Doe' })}
-      />
-
+    <StandardLayout>
       <section>
         <h2>Pages in Storybook</h2>
         <p>
@@ -66,6 +53,6 @@ export const Page: React.FC = () => {
           Viewports addon in the toolbar
         </div>
       </section>
-    </article>
+    </StandardLayout>
   )
 }
